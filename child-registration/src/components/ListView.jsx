@@ -44,8 +44,8 @@ const ListView = () => {
                     </Typography>
                 </CardHeader>
                 <div className='flex justify-end'>
-                    <button onClick={() => handleSort('age')} className="bg-gray-300 text-gray-700 py-2 px-4 rounded-md mr-4">Sort by Age</button>
-                    <button onClick={() => handleSort('name')} className="bg-gray-300 text-gray-700 py-2 px-4 rounded-md">Sort by Name</button>
+                    <button onClick={() => handleSort('age')} className="bg-gray-300 text-gray-700 py-2 px-4 rounded-md mr-4 hover:bg-gray-400 hover:text-white">Sort by Age</button>
+                    <button onClick={() => handleSort('name')} className="bg-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-400 hover:text-white">Sort by Name</button>
                 </div>
 
                 <ul className="mt-4">
