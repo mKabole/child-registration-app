@@ -59,4 +59,38 @@ Functionality
 - Retrieves child data based on the provided ID from the API.
 - Displays information such as the child's name, age, gender, and immunizations on the profile page.
 
+ # Child Management API 
+Purpose
+The Child Management API provides endpoints to manage children's information, enabling CRUD (Create, Read, Update, Delete) operations for child records. It interacts with a SQLite database to store and retrieve child-related data.
+
+Dependencies
+- Express: Handles HTTP requests, routes, and middleware.
+- Body-parser: Parses incoming request bodies.
+- Sequelize: ORM (Object-Relational Mapping) library for interacting with the SQLite database.
+- Cors: Middleware to enable Cross-Origin Resource Sharing (CORS) for web security.
+Database Configuration
+- Database: Uses SQLite with Sequelize ORM.
+- Models: Defines a Child model with fields for firstname, lastname, gender, immunizations, and age.
+API Endpoints
+- GET /children: Retrieves a list of all children.
+- GET /child/:id: Retrieves a specific child by ID.
+- POST /children: Creates a new child record.
+- PUT /child/:id: Updates a specific child's information by ID.
+- DELETE /child/:id: Deletes a specific child by ID.
+Usage
+GET requests fetch data:
+- /children retrieves all children.
+- /child/:id retrieves a specific child by its ID.
+POST request creates a new child: /children.
+PUT request updates a specific child's information by ID: /child/:id.
+DELETE request deletes a specific child by ID: /child/:id.
+Middleware
+- body-parser: Parses incoming request bodies as JSON or URL-encoded.
+CORS Configuration
+- Enables CORS for requests from http://localhost:3000 with specified HTTP methods and credentials.
+Error Handling
+- Returns appropriate error responses for cases where the child record is not found (404 status).
+Starting the Server
+- The API listens on port 5000.
+
 
